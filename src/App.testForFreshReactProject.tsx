@@ -6,12 +6,12 @@ import App from './App';
 
 test('renders learn react link, test succeed', () => {
   render(<App />); // create a virtual DOM for the test
-  const linkElement = screen.getByText(/learn react/i);  // from @testing library, finds case-insensitive text in the virtual DOM
+  const linkElement = screen.getByText(/learn react/i); // from @testing library, finds case-insensitive text in the virtual DOM
   expect(linkElement).toBeInTheDocument(); // assertions, causes test to succeed or fail
 });
 test('renders learn react link, test will fail', () => {
   render(<App />); // create a virtual DOM for the test
-  const linkElement = screen.getByText(/learn testing/i);  // from @testing library, finds case-insensitive text in the virtual DOM
+  const linkElement = screen.getByText(/learn testing/i); // from @testing library, finds case-insensitive text in the virtual DOM
   expect(linkElement).toBeInTheDocument(); // assertions, causes test to succeed or fail
   // examples of other assertions
   // expect(element.textContent).toBe('Learn Testing');

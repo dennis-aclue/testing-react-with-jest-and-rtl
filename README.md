@@ -116,3 +116,20 @@ Actions on Save
 activate checkbox: Reformat code
 activate checkbox: Optimizing imports
 activate checkbox: run ESLint --fix on save
+
+Inside IntelliJ (CTRL+ALT+S): File -> Settings -> Editor -> Code Style -> JavaScript ->
+
+### TypeScript, JavaScript ###
+
+* Tab size: 2
+* Indent: 2
+* Continuation indent: 2
+  Tab spaces: Within:
+* check 'Object literal braces'
+* check 'ES6 import/export braces'
+
+### HTML ###
+
+Tab Others: Spaces
+
+* check 'In empty Tags'

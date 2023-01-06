@@ -4,7 +4,9 @@ module.exports = {
     es2021: true,
   },
   extends: [
+    'eslint:recommended',
     'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
     'airbnb',
   ],
   parser: '@typescript-eslint/parser',
@@ -27,5 +29,15 @@ module.exports = {
       controlComponents: ['CustomInput'],
       depth: 3,
     }],
+    // 'import/extensions': [
+    //   'error',
+    //   'ignorePackages',
+    //   {
+    //     js: 'never',
+    //     jsx: 'never',
+    //     ts: 'never',
+    //     tsx: 'never',
+    //   },
+    // ],
   },
 };
