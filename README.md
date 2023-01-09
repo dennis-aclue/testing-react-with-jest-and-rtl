@@ -64,7 +64,8 @@ information.
 React comes out with a default ESLint configuration. It is a tool for identifying and reporting on patterns found in
 ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs. ESLint is built into Create
 React App.
-It is just a matter how to configure it.
+It is just a matter how to configure it. In following with background of the airbnb plugin!
+For first use:
 
 1. Install ESLint and the plugin for testing library in Jest, inside /src folder:
    https://github.com/testing-library/eslint-plugin-testing-library
@@ -84,7 +85,7 @@ It is just a matter how to configure it.
 
 4. If there are high vulnerabilities, run to check:
    ```npm audit fix```
-   and afterwards:
+   and maybe:
    ```npm audit fix --force```
 
 5. Now we can initialize linting:
@@ -100,14 +101,17 @@ It is just a matter how to configure it.
    √ What format do you want your config file to be in? · JavaScript
    Checking peerDependencies of eslint-config-airbnb@latest . yes
 
-If there are any errors try to fix with ```npm audit fix```
-
 6. Fix error: ESLint couldn't find the plugin "eslint-plugin-testing-library", or
    ESLint: Specify a path to the 'eslint' package
    Click the ESLint settings ... button in the bottom right corner (CTR+ALT+S)
    or inside IntelliJ: File -> Settings -> Languages & Frameworks -> JavaScript -> Code Quality Tools -> ESLint
     - Manual ESLint configuration
     - ESLint package: node_modules/eslint
+
+   If there are any other errors regarding packages try to fix with ```npm audit fix```
+
+   Maybe an Error, because the .eslintrc.js file already exist and do not follow the rules of the airbnb style guide.
+   Try right click inside file and select "Fix ESLint Problems"
 
 ### Some helpful configuration ###
 
@@ -125,6 +129,7 @@ Inside IntelliJ (CTRL+ALT+S): File -> Settings -> Editor -> Code Style -> JavaSc
 * Indent: 2
 * Continuation indent: 2
   Tab spaces: Within:
+* uncheck 'Grouping Parentheses'
 * check 'Object literal braces'
 * check 'ES6 import/export braces'
 
