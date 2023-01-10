@@ -219,4 +219,14 @@ requests.
    ```beforeAll(() => server.listen())```
    ```afterEach(() => server.resetHandlers())```
    ```afterAll(() => server.close())```
-7. Make sure tests server listens during tests
+7. Set up the "Options" inside ./entry/test folders
+   The Options Component do a get request to the server, but the request will never happen because we are mocking the
+   server. Instead, Mock Service Worker intercept the request and return the data.
+8. Install Axios
+   ```npm install axios```
+9. Update package.json for React Error message: SyntaxError: Cannot use import statement outside a module
+   ```"test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
+
+### When you are waiting for something to appear asynchronously on the page, you must use "await" and "findBy" ###
+
+
