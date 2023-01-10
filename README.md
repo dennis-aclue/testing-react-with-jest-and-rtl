@@ -138,3 +138,12 @@ Inside IntelliJ (CTRL+ALT+S): File -> Settings -> Editor -> Code Style -> JavaSc
 Tab Others: Spaces
 
 * check 'In empty Tags'
+
+### Styling with bootstrap for course ###
+
+1. Install bootstrap and react-bootstrap
+   ```npm install bootstrap react-bootstrap```
+
+2. Add js links to index.html: https://react-bootstrap.netlify.app/getting-started/introduction/#browser-globals
+3. Add css import to index.tsx: ```import 'bootstrap/dist/css/bootstrap.min.css';```
+

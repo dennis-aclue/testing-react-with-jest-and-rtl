@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import App from '../../src/App';
 
 // Use this test to try out the testing library after a fresh REACT initializing project
 
