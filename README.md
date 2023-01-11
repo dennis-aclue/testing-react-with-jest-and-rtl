@@ -227,6 +227,12 @@ requests.
 9. Update package.json for React Error message: SyntaxError: Cannot use import statement outside a module
    ```"test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
 
-### When you are waiting for something to appear asynchronously on the page, you must use "await" and "findBy" ###
+### Await and Async ###
 
+When you are waiting for something to appear asynchronously on the page, you must use "await" and "findBy"
+
+### Race Condition: ###
+
+You want to run the test on every system. Sometimes the test will fail because the system is too slow or will pass, if
+the system is too fast. To solve this problem, you can use the "waitFor" function. 
 
