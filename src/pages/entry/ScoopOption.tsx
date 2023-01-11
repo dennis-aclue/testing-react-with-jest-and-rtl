@@ -1,7 +1,6 @@
 import Col from 'react-bootstrap/Col';
 
-// eslint-disable-next-line react/prop-types
-export default function ScoopOptions({ name, imagePath }) {
+export default function ScoopOptions({ imagePath, name }: { imagePath: string, name: string }) {
   return (
     <Col xs={12} sm={6} md={4} lg={3} style={{ textAlign: 'center' }}>
       <img

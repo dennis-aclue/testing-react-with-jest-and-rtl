@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Row } from 'react-bootstrap';
-import ScoopOption from './ScoopOption';
+import ScoopOptions from './ScoopOption';
+import ToppingOption from './ToppingOption';
 
-// eslint-disable-next-line react/prop-types
-export default function Options({ optionType }) {
+export default function Options({ optionType }: { optionType: string }) {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -16,11 +16,16 @@ export default function Options({ optionType }) {
       });
   }, [optionType]);
 
-  // TODO: Toppings not implemented yet instead of null
-  const ItemComponent = optionType === 'scoops' ? ScoopOption : null;
+  const ItemComponent = optionType === 'scoops' ? ScoopOptions : ToppingOption;
 
+  // @ts-ignore
   const optionItems = items.map((item) => (
-    <ItemComponent key={item.name} name={item.name} imagePath={item.imagePath} />
+    <ItemComponent
+      key={item.name}
+      name={item.name}
+      imagePath={item.imagePath}
+    />
+    // the key is the array index of the itemComponent
   ));
 
   return <Row>{optionItems}</Row>;
